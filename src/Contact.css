@@ -1,0 +1,150 @@
+/* Contact Component Styles */
+.contact-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Contact List */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+
+/* Contact Display */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-name {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.contact-phone, .contact-email {
+  color: #666;
+  margin-right: 15px;
+}
+
+/* Contact Actions */
+.contact-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-edit {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #1976D2;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f;
+}
+
+.btn-save {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #45a049;
+}
+
+/* Edit Form */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-input {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .contact-details {
+    min-width: auto;
+    width: 100%;
+  }
+}
