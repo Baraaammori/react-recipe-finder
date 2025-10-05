@@ -1,21 +1,11 @@
 import './App.css';
-import { useState } from 'react';
-import Contacts from './Contact';
-import Navbar from './ContactsNavbar';
+import WeatherApp from './weather';
 
 function App() {
-  const [formView, setFormView] = useState(false);
-
-  function toggleForm() {
-    setFormView(!formView);
-  }
-
   return (
     <div className="app">
-      <Navbar logo="My Contacts" toggleForm={toggleForm}/>
-      <main className="main-content">
-        <Contacts toggleForm={toggleForm} showForm={formView}/>
-      </main>
+      <div className='navbar'><a href="">Weather App</a></div>
+      <WeatherApp />
     </div>
   );
 }
