@@ -1,35 +1,35 @@
-# React Weather App
+# React Recipe Finder App
 
-A modern, responsive weather application built with React.js that provides real-time weather information for any city worldwide using the OpenWeatherMap API.
+A modern, responsive recipe finder application built with React.js that allows users to search for recipes from around the world using TheMealDB API.
 
 ## 🌟 Features
 
-- **Real-time Weather Data**: Get current weather information using OpenWeatherMap API
-- **Global City Search**: Search for weather in any city worldwide
-- **Temperature Display**: Shows temperature in Celsius with detailed weather descriptions
-- **Modern UI**: Clean, responsive design with gradient backgrounds and smooth animations
-- **Error Handling**: Proper error messages for invalid city names or network issues
-- **Loading States**: Visual feedback during API calls for better user experience
-- **Form Validation**: Prevents empty searches and provides user guidance
+- **Recipe Search**: Search for recipes by name or ingredient
+- **Beautiful Grid Layout**: Display recipes in a responsive card grid
+- **Recipe Cards**: Show recipe image, name, and cuisine type
+- **Loading States**: Animated loading spinner during API calls
+- **Component Architecture**: Professional React component structure
+- **Error Handling**: Proper error messages and user feedback
+- **Clean UI**: Simple, modern design with smooth interactions
 
 ## 🚀 Technologies Used
 
 - **React.js** - Frontend framework with hooks (useState)
 - **JavaScript ES6+** - Modern async/await patterns and fetch API
-- **CSS3** - Flexbox layouts, gradients, and smooth animations
-- **OpenWeatherMap API** - Real-time weather data integration
+- **CSS3** - Grid layouts, flexbox, and animations
+- **TheMealDB API** - Free recipe data API (no key required!)
 - **Vite** - Fast build tool and development server
 
 ## 🛠️ Installation & Setup
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/react-weather-app.git
+git clone https://github.com/YOUR_USERNAME/react-recipe-finder.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd react-weather-app
+cd react-recipe-finder
 ```
 
 3. Install dependencies:
@@ -37,87 +37,104 @@ cd react-weather-app
 npm install
 ```
 
-4. Get your API key from [OpenWeatherMap](https://openweathermap.org/api)
-
-5. Replace the API key in `src/weather.jsx`:
-```javascript
-const apiKey = "YOUR_API_KEY_HERE"
-```
-
-6. Start the development server:
+4. Start the development server:
 ```bash
 npm run dev
 ```
 
-7. Open your browser and visit `http://localhost:5173`
+5. Open your browser and visit `http://localhost:5173`
+
+**No API key needed!** TheMealDB API is completely free.
 
 ## 📋 How It Works
 
-1. **Enter City Name** - Type any city name in the search input
-2. **Submit Search** - Click "Check" button or press Enter
-3. **View Results** - See current temperature and weather description
-4. **Error Feedback** - Get instant feedback for invalid cities or network errors
+1. **Enter Recipe Name** - Type any recipe or ingredient (e.g., "chicken", "pasta", "cake")
+2. **Click Search** - Submit your search query
+3. **View Results** - Browse recipe cards with images and details
+4. **Loading Animation** - See smooth loading spinner while fetching
 
 ## 🏗️ Project Structure
 
 ```
 src/
-├── App.jsx              # Main application component
-├── App.css              # Global application styles
-├── weather.jsx          # Weather component with API integration
-├── weather.css          # Weather component styles
-├── main.jsx            # React application entry point
-└── index.css           # Global CSS styles
+├── components/
+│   ├── SearchForm/
+│   │   ├── SearchForm.jsx       # Search input component
+│   │   └── SearchForm.css
+│   ├── RecipeCard/
+│   │   ├── RecipeCard.jsx       # Individual recipe card
+│   │   └── RecipeCard.css
+│   ├── RecipeList/
+│   │   ├── RecipeList.jsx       # Recipe grid container
+│   │   └── RecipeList.css
+│   └── LoadingSpinner/
+│       ├── LoadingSpinner.jsx   # Loading animation
+│       └── LoadingSpinner.css
+├── App.jsx                      # Main app component
+├── App.css                      # Global styles
+├── RecipeFinder.jsx             # Main container component
+└── RecipeFinder.css             # Container styles
 ```
 
 ## 🎯 Technical Highlights
 
+### Component Architecture
+- **Separation of Concerns** - Each component has one responsibility
+- **Reusable Components** - RecipeCard can be used anywhere
+- **Props Flow** - Parent to child data passing
+- **Component Composition** - Building complex UI from simple components
+
 ### API Integration
 - Asynchronous fetch requests with async/await
-- Comprehensive error handling with try-catch blocks
-- API response data parsing and state management
-- Loading states for better user experience
+- Error handling with try-catch blocks
+- Loading states for better UX
+- Real-time data fetching from TheMealDB
 
 ### React Patterns
 - Functional components with hooks
 - useState for state management
-- Event handling and form submission
-- Conditional rendering for different UI states
+- Props and prop destructuring
+- Conditional rendering (loading vs data)
+- Array mapping for dynamic lists
+- Key props for list items
 
 ### Modern CSS
-- Flexbox layouts for responsive design
-- Gradient backgrounds and glass morphism effects
-- Smooth hover animations and transitions
-- Mobile-first responsive design
+- CSS Grid for responsive recipe layout
+- Flexbox for component alignment
+- Smooth hover effects and transitions
+- Clean, simple color scheme
+- Animated loading spinner
 
 ## 🧠 Learning Outcomes
 
 Building this project demonstrates:
 
-- **API Integration** - Working with external APIs and handling responses
-- **Async Programming** - Modern JavaScript async/await patterns
-- **Error Handling** - Proper error management and user feedback
-- **State Management** - React hooks for dynamic UI updates
-- **Form Handling** - Input validation and submission handling
-- **Responsive Design** - CSS techniques for all device sizes
+- **Component Architecture** - Professional React project structure
+- **API Integration** - Fetching and displaying external data
+- **State Management** - Managing loading, data, and error states
+- **Props** - Passing data and functions between components
+- **Array Mapping** - Dynamically rendering lists
+- **Async JavaScript** - Modern async/await patterns
+- **CSS Grid** - Responsive layouts
 
 ## 🔮 Future Enhancements
 
-- [ ] 5-day weather forecast
-- [ ] Geolocation-based weather
-- [ ] Temperature unit conversion (Celsius/Fahrenheit)
-- [ ] Weather maps integration
-- [ ] Favorite cities list
-- [ ] Dark/light theme toggle
-- [ ] Weather alerts and notifications
+- [ ] Recipe details modal with instructions
+- [ ] Filter by category (Chicken, Pasta, Dessert, etc.)
+- [ ] Random recipe button
+- [ ] Favorite recipes with localStorage
+- [ ] Ingredients list display
+- [ ] Recipe instructions step-by-step
+- [ ] Search suggestions
+- [ ] Dark mode toggle
 
 ## 🌍 API Information
 
-This app uses the [OpenWeatherMap API](https://openweathermap.org/api) which provides:
-- Current weather data for any location
-- Temperature, humidity, and weather descriptions
-- Global coverage with accurate data
-- Free tier available for development
+This app uses [TheMealDB API](https://www.themealdb.com/api.php):
+- **Free to use** - No API key required
+- **Global recipes** - Recipes from around the world
+- **Rich data** - Images, instructions, ingredients, categories
+- **Search by name or ingredient**
 
 ## 👨‍💻 Author
 

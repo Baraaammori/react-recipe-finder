@@ -1,11 +1,12 @@
 import './App.css';
-import WeatherApp from './weather';
+import RecipeFinder from './RecipeFinder';
 
 function App() {
   return (
     <div className="app">
-      <div className='navbar'><a href="">Weather App</a></div>
-      <WeatherApp />
+      <h1>🍳 Recipe Finder</h1>
+      <p>Let's build this step by step and learn useEffect!</p>
+      <RecipeFinder />
     </div>
   );
 }
